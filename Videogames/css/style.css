@@ -1,0 +1,239 @@
+/*********************************
+ *      General
+ *********************************/
+
+html {
+    scroll-behavior: smooth;        /* maybe it does not work in your browser */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #222233;
+}
+
+main {
+    padding: 5em 1em 1em;
+    display: flex;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*********************************
+*      Navigation
+*********************************/
+
+nav.topnav {
+    background-color: #141420;
+    padding: 0 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    box-shadow: 0 0 25px 0 black;
+}
+
+a.nav-link {
+    color: rgb(209, 227, 253);
+    text-decoration: none;
+    font-size: 1.5em;
+
+    padding: 20px;
+}
+
+a.nav-link:hover {
+    background-color: black;
+}
+
+/*********************************
+*      Banner
+*********************************/
+
+/* Assasins Creed Background */
+.bg-ac {
+    height: 100%;
+
+    background-image: url("../img/assassin.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner > h1 {
+    color: black;
+
+    text-align: center;
+    font-size: 7em;
+    text-shadow: 5px -5px 5px white;
+
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+/*********************************
+*      Content
+*********************************/
+
+.content {
+    color: rgb(209, 227, 253);
+}
+
+.content > h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.content > p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+/*********************************
+*      Transition Boxes
+*********************************/
+
+#transition-boxes {
+    margin-left: 3em;
+
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+
+}
+
+#transition-boxes > * {
+    margin-bottom: 3em;
+}
+
+div#origin {
+    background-image: url('../img/origin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: transparent;
+    opacity: 1;
+    transition: opacity 0.7s, color 0.7s;
+
+    width: 250px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#origin:hover {
+    opacity: 0.4;
+    color: white;
+}
+
+div#origin > p {
+    font-size: 80px;
+}
+
+div#steam {
+    background-image: url('../img/steamRound.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 160px;
+    height: 160px;
+
+    transition: width .7s, height .7s;
+}
+
+div#steam:hover {
+    width: 260px;
+    height: 260px;
+}
+
+div#uplay {
+    background-image: url('../img/uplay.png');
+    background-color: rgba(255, 255, 255, 0.205);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 10px 0 transparent;
+    transition: box-shadow .7s;
+}
+
+div#uplay:hover {
+    box-shadow: 10px 10px 10px 0 rgba(26, 154, 228, 0.781);
+}
+
+/*                  tbd.                 */
+
+/*********************************
+*      Footer Animation
+*********************************/
+
+@keyframes pacman {
+    0% { left: 25%;  }
+    50% { left: 75%; transform: rotateY(180deg); }
+    100% { left: 25%; }
+}
+
+@keyframes ghost {
+    0% { left: 65%; }
+    50% { left: 35%; }
+    100% { left: 65%; }
+}
+
+.pacman-animation {
+    position: relative;
+    bottom: 0;
+}
+
+.pacman {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/pacman.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: pacman 5s infinite;
+}
+
+.ghost {
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    top: -35px;
+
+    background-image: url("../img/ghost.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: ghost 5s infinite;
+}

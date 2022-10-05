@@ -1,0 +1,76 @@
+/*
+ * https://www.youtube.com/watch?v=v1PeTDrw6OY
+ *
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e84118;
+}
+
+/*
+    Gestaltung des Formulars
+*/
+.search-box {
+    /* Element wird in der Mitte des fensters Positioniert */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #2f3640;
+    height: 40px;
+    padding: 10px;
+
+    border-radius: 40px;
+}
+
+/*
+    Das Textfeld wird sichtbar gemacht wenn man mit der Maus
+    über das Fromular fährt
+*/
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: white;
+}
+
+.search-btn {
+   color: #e84118;
+
+   float: right;
+   width: 40px;
+   height: 40px;
+
+   border-radius: 50%;
+   border: none;
+   background: #2f3640;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* Farbwechsel wird schöner gemacht */
+   transition: 0.4s;
+}
+
+.search-txt {
+    border: none;
+    outline: none;
+
+    background: none;    
+    float: left;
+    padding: 0;
+    width: 0px;
+
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+
+    /* width von 0 auf 240 wird mit Transition festgelegt */
+    transition: 0.4s;
+}
